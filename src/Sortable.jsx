@@ -58,7 +58,7 @@ class Sortable extends Component {
 
                         if ((typeof remoteOptions.group === 'object') && (remoteOptions.group.pull === 'clone')) {
                             // Remove the node with the same data-reactid
-                            evt.item.parentNode.removeChild(evt.item);
+                            evt.clone.parentNode.removeChild(evt.clone);
                         }
 
                         remote.props.onChange && remote.props.onChange(remoteItems, remote.sortable, evt);
